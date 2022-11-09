@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Masjumbuko Semba">
+<meta name="dcterms.date" content="2022-08-04">
+
+<title>Ng’ara - Data Science at the frontline</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+
+<script type="text/plain" cookie-consent="tracking">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXX', { 'anonymize_ip': true});
+</script>
+
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({
+  "notice_banner_type":"simple",
+  "consent_type":"express",
+  "palette":"light",
+  "language":"en",
+  "page_load_consent_levels":["strictly-necessary"],
+  "notice_banner_reject_button_hide":false,
+  "preferences_center_close_button_hide":false,
+  "website_name":""
+  });
+});
+</script> 
+  
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "clean",
+  "openSidebar": false
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="Ng’ara - Data Science at the frontline">
+<meta name="twitter:description" content="What’s get to consider">
+<meta name="twitter:creator" content="@dragsonstyle">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Ng’ara</span>
+  </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../project.html">Projects</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../dashboards.html">Dashboards</a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">Masumbuko Semba</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lugoga/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"><i class="bi bi-rss" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Data Science at the frontline</h1>
+            <p class="subtitle lead">What’s get to consider</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">news</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Masjumbuko Semba </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 4, 2022</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
+<p><img src="ngara.png" class="img-fluid"></p>
+</div></div>
+        
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p>Data science has become an essential element for companies that want to …………….</p>
+<p><img src="coding.jpg" class="img-fluid"></p>
+<p>Data science has become an essential element for companies that want to gain a competitive advantage. The role of data science is to put the data analytics process into a strategic context so that companies can harness the power of their data while working on their data science project. In this post I will take you through some key concepts that a keen data scientists should carefully and with intent consider and explore before take a data related consutation. A clear understanding of these key concept will guide into some key focus areas that surround the project. You will understand the differences between different stages and how to tackle them effectively depending on your end goal with the project.</p>
+<section id="time-sinks-for-data-wrangling" class="level2">
+<h2 class="anchored" data-anchor-id="time-sinks-for-data-wrangling">Time sinks for data wrangling</h2>
+<p>Estimating the time it will take to complete a project is an important part of being a successful PhD student, researcher or consultant. A major time sink on many analytical projects is data wrangling. Often the wrangling can take longer than the analysis. Here’s some good questions to ask yourself and your collaborators. They will help you better estimate the time you need for data wrangling.</p>
+</section>
+<section id="who-has-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="who-has-the-data">Who has the data?</h2>
+<p>If you are starting a collaboration, find out where the data is stored before starting. Many times collaborators have told me they ‘have’ or ‘can get’ the data. We start and I find out they don’t actually, literally, have the data, they just know someone who has it. So begins a lengthy negotiation about data access with the person that actually has the data. Another consideration in such cases is whether your use is consistent with original ethics approval for the data collection (if it was needed).</p>
+</section>
+<section id="is-the-data-real" class="level2">
+<h2 class="anchored" data-anchor-id="is-the-data-real">Is the data real?</h2>
+<p>Seriously, if its not your data, are you sure its real data? Ok this situation is rare (I hope), but it does happen that collaborators share false data.</p>
+</section>
+<section id="how-is-the-data-recorded-and-stored" class="level2">
+<h2 class="anchored" data-anchor-id="how-is-the-data-recorded-and-stored">How is the data recorded and stored?</h2>
+<p>If collaborating to get data, find out how it is stored and recorded. Is it in pdf tables, is it a single spreadsheet with good meta-data, or is it a series of nested excel sheets with cross-referenced formulas?</p>
+</section>
+<section id="has-the-data-been-analyzed-before" class="level2">
+<h2 class="anchored" data-anchor-id="has-the-data-been-analyzed-before">Has the data been analyzed before?</h2>
+<p>If it has, it is usually already cleaned and easier to work with. Also check what it has been used for. If it has been used just to generate high level summary stats, it might not be clean for detailed analysis. If its been analyzed in R or python before, even better. It is probably clean and R ready.</p>
+</section>
+<section id="how-big-ie-computer-memory-is-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="how-big-ie-computer-memory-is-the-data">How big (ie computer memory) is the data?</h2>
+<p>Bigger datasets are harder to clean and error check. Very small data can be checked manually. Larger datasets can easily be checked with a combination of manual checking, graphs and programming. Very large dataset (ie bigger than your RAM, like gigabytes) present new problems. R will take a while to chug through processing steps. This can really slow down debugging, especially for complex tasks.</p>
+<p>You may also have to develop special strategies, like breaking your data into chunks for error checking and debugging of analysis. All in all this means a 500kb file takes about the same amount of time to wrangle as a 100mb file, whereas a 1 gigabyte file might take 10 times longer.</p>
+</section>
+<section id="does-the-project-involve-spatial-data" class="level2">
+<h2 class="anchored" data-anchor-id="does-the-project-involve-spatial-data">Does the project involve spatial data?</h2>
+<p>Spatial data records dependencies between data points (coordinates). This can present new problems. You’ll obviously need to use specialist GIS tools. Processing steps can be much slower, because the algorithms to cope with spatial dependency just take longer. For example, the maths of a spatial join is much more complex (geometry) than that for a regular join of two dataframes on a single variable.</p>
+</section>
+<section id="does-the-project-involve-temporal-data" class="level2">
+<h2 class="anchored" data-anchor-id="does-the-project-involve-temporal-data">Does the project involve temporal data?</h2>
+<p>Dates and times are hard to work with. First there can be gaps in a time-series. How will you deal with that? Maybe you need to impute values before analysis?</p>
+<p>Second, the programming of dates is just hard. I don’t know anyone that likes it. For example, what day is 30 days before the 15th March? Depends on whether its a leap year right? Annoying details like this can really slow you dowe.</p>
+<p>Also timezones! People always send me data with times, but neglect to tell me what time zone its in (or I forget to ask perhaps).</p>
+</section>
+<section id="are-you-joining-multiple-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="are-you-joining-multiple-datasets">Are you joining multiple datasets?</h2>
+<p>This is a big one. Joining datasets is a major, major, timesink.</p>
+<p>So much so, you could basically say my niche in my field is joining different datasets in new ways. We can get new interesting results, but it can be hard (which is why not everyone is doing it).</p>
+<p>First, joins present opportunities for errors. If you are doing a simple join on a shared variable (e.g.&nbsp;with dplyr’s inner_join), but the variable is coded inconsistently across dataframes you might loose data. This might be hard to detect in large datasets.</p>
+<p>Second, joins might be based more loosely on spatial or temporal similarities. These can get fiddly. Say you want to extract wave height data at some diver survey sites. Just use the coordinates right? Well, what if the wave data doesn’t extend all the way to the coast, or the resolution is too ‘blocky’ and it misses some dive sites? Now you have to invent a way to find wave values near to dive sites, ideally only when wave data are missing. It gets fiddly.</p>
+<p>The same issue happens with joins on times/dates. Maybe rainfall isn’t measured on the exact day you had bird counts. So perhaps now you impute rainfall to the missing day, but what algorithm of the 1000s possible are you going to use for the imputation?</p>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>So think carefully about the issues your project’s data might present. If you’re still not sure how long it might take, then try this formula recommended by a friend:</p>
+
+
+</section>
+
+<p>This blog is brought to you by <a href="https://semba.netlify.app" class="uri">https://semba.netlify.app</a></p></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+      <div class="nav-footer-center"><div class="cookie-consent-footer"><a href="#" id="open_preferences_center">Cookie Preferences</a></div></div>
+  </div>
+</footer>
+
+
+
+</body></html>

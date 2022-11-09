@@ -1,0 +1,12 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/forecastingTimeseries/index.html",
+      "/posts/newvisuals/index.html",
+      "/posts/spatialState/index.html",
+      "/posts/lessons/index.html",
+      "/posts/coding_r/index.html"
+    ]
+  }
+]
